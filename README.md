@@ -10,9 +10,15 @@ This project demonstrates MuJoCo physics simulation using the Unitree Go1 quadru
 
 ### Demo Video
 
-![Simulation Demo](output.mp4)
+<video width="640" height="480" controls>
+  <source src="output.mp4" type="video/mp4">
+  Your browser does not support the video tag. 
+  <a href="output.mp4">Download the demo video</a>
+</video>
 
 _The demo video shows the Unitree Go1 robot simulation with smooth camera rotation and dynamic control perturbations._
+
+> **Note:** If the video doesn't display above, you can [click here to download it](output.mp4) or view it directly in your file browser.
 
 ## 🚀 Project Overview
 
