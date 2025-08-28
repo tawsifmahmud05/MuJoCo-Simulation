@@ -220,6 +220,6 @@ $RECYCLE.BIN/
 # *.weights
 
 # Screenshots and debug files
-screenshot*.png
+
 debug_*
-MJDATA.TXT
+

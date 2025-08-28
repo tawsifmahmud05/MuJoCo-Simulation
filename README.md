@@ -2,6 +2,18 @@
 
 This project demonstrates MuJoCo physics simulation using the Unitree Go1 quadruped robot model. It includes both interactive viewer demos and Jupyter notebook tutorials for robotics simulation and visualization.
 
+## 📸 Preview
+
+### Screenshot
+
+![Project Screenshot](screenshot.png)
+
+### Demo Video
+
+![Simulation Demo](output.mp4)
+
+_The demo video shows the Unitree Go1 robot simulation with smooth camera rotation and dynamic control perturbations._
+
 ## 🚀 Project Overview
 
 This repository contains:
@@ -20,9 +32,10 @@ MuJoCo Project/
 ├── interactive_viewer.py       # Additional interactive viewer script
 ├── requirements.txt            # Python dependencies
 ├── .gitignore                 # Git ignore rules
+├── README.md                  # Project documentation
 ├── MJDATA.TXT                 # MuJoCo debug/memory data
-├── output.mp4                 # Generated simulation video
-├── screenshot.png             # Project screenshot
+├── output.mp4                 # 🎥 Generated simulation video
+├── screenshot.png             # 📸 Project screenshot
 ├── venv/                      # Python virtual environment
 └── unitree_go1/               # Unitree Go1 robot model
     ├── go1.xml                # Main robot model file
@@ -149,7 +162,7 @@ The tutorial notebook demonstrates how to:
 4. Render high-quality videos
 5. Export as MP4 files
 
-Example output: `output.mp4` (generated from tutorial)
+**Example output:** [`output.mp4`](output.mp4) - A 10-second simulation showing the Unitree Go1 robot with dynamic motion and smooth camera work.
 
 ## 🤖 Robot Model: Unitree Go1
 
