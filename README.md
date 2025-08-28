@@ -79,7 +79,7 @@ MuJoCo Project/
 1. **Clone or download the project**
 
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/tawsifmahmud05/MuJoCo-Simulation
    cd "MuJoCo Project"
    ```
 
