@@ -6,19 +6,15 @@ This project demonstrates MuJoCo physics simulation using the Unitree Go1 quadru
 
 ### Screenshot
 
-![Project Screenshot](screenshot.png)
+![Project Screenshot](media/screenshot.png)
 
-### Demo Video
+### Demo Animation
 
-<video width="640" height="480" controls>
-  <source src="output.mp4" type="video/mp4">
-  Your browser does not support the video tag. 
-  <a href="output.mp4">Download the demo video</a>
-</video>
+![Simulation Demo](media/demo.gif)
 
-_The demo video shows the Unitree Go1 robot simulation with smooth camera rotation and dynamic control perturbations._
+_The demo animation shows the Unitree Go1 robot simulation with smooth camera rotation and dynamic control perturbations._
 
-> **Note:** If the video doesn't display above, you can [click here to download it](output.mp4) or view it directly in your file browser.
+> **Note:** Full video available at [`media/output.mp4`](media/output.mp4)
 
 ## 🚀 Project Overview
 
@@ -40,8 +36,10 @@ MuJoCo Project/
 ├── .gitignore                 # Git ignore rules
 ├── README.md                  # Project documentation
 ├── MJDATA.TXT                 # MuJoCo debug/memory data
-├── output.mp4                 # 🎥 Generated simulation video
-├── screenshot.png             # 📸 Project screenshot
+├── media/                     # 📁 Media files
+│   ├── demo.gif               # 🎬 Animated demo (for README)
+│   ├── output.mp4             # 🎥 Full simulation video
+│   └── screenshot.png         # 📸 Project screenshot
 ├── venv/                      # Python virtual environment
 └── unitree_go1/               # Unitree Go1 robot model
     ├── go1.xml                # Main robot model file
@@ -168,7 +166,10 @@ The tutorial notebook demonstrates how to:
 4. Render high-quality videos
 5. Export as MP4 files
 
-**Example output:** [`output.mp4`](output.mp4) - A 10-second simulation showing the Unitree Go1 robot with dynamic motion and smooth camera work.
+**Example outputs:**
+
+- **GIF Animation:** [`media/demo.gif`](media/demo.gif) - Compressed preview for quick viewing
+- **Full Video:** [`media/output.mp4`](media/output.mp4) - High-quality 10-second simulation with dynamic motion and smooth camera work
 
 ## 🤖 Robot Model: Unitree Go1
 
