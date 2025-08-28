@@ -43,7 +43,7 @@ def main():
     blend_std = 0.8
     
     # Model path
-    model_dir = Path("unitree_go1")
+    model_dir = Path("Model/unitree_go1")
     model_xml = model_dir / "scene.xml"
     
     print(f"Loading model from: {model_xml}")

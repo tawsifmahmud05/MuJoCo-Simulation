@@ -13,7 +13,7 @@ from pathlib import Path
 
 def main():
     # Model path - you can change this to any model in the menagerie
-    model_dir = Path("unitree_go1")
+    model_dir = Path("Model/unitree_go1")
     model_xml = model_dir / "scene.xml"
     
     print(f"Loading model from: {model_xml}")

@@ -8,13 +8,17 @@ This project demonstrates MuJoCo physics simulation using the Unitree Go1 quadru
 
 ![Project Screenshot](media/screenshot.png)
 
-### Demo Animation
+### Demo Animations
 
-![Simulation Demo](media/demo.gif)
+**Stable Simulation:**
+![Stable Simulation Demo](media/demo.gif)
 
-_The demo animation shows the Unitree Go1 robot simulation with smooth camera rotation and dynamic control perturbations._
+**Unstable Walking Research:**
+![Unstable Walking Demo](media/unstable_walking.gif)
 
-> **Note:** Full video available at [`media/output.mp4`](media/output.mp4)
+_The demo animations show the Unitree Go1 robot simulation with different control algorithms. The first shows stable simulation with camera rotation, while the second demonstrates unstable walking gait research._
+
+> **Note:** Full videos available at [`media/output.mp4`](media/output.mp4) and [`media/unstable_walking.mp4`](media/unstable_walking.mp4)
 
 ## 🚀 Project Overview
 
@@ -23,6 +27,7 @@ This repository contains:
 - **MuJoCo physics simulation** of the Unitree Go1 robot
 - **Interactive viewer demos** with real-time visualization
 - **Jupyter notebook tutorials** for learning MuJoCo
+- **Walking gait research** including unstable walking experiments
 - **Video rendering capabilities** for creating simulation outputs
 
 ## 📁 Project Structure
@@ -37,23 +42,29 @@ MuJoCo Project/
 ├── README.md                  # Project documentation
 ├── MJDATA.TXT                 # MuJoCo debug/memory data
 ├── media/                     # 📁 Media files
-│   ├── demo.gif               # 🎬 Animated demo (for README)
-│   ├── output.mp4             # 🎥 Full simulation video
+│   ├── demo.gif               # 🎬 Stable simulation demo (for README)
+│   ├── unstable_walking.gif   # 🎬 Unstable walking demo (for README)
+│   ├── output.mp4             # 🎥 Full stable simulation video
+│   ├── unstable_walking.mp4   # 🎥 Full unstable walking video
 │   └── screenshot.png         # 📸 Project screenshot
-├── venv/                      # Python virtual environment
-└── unitree_go1/               # Unitree Go1 robot model
-    ├── go1.xml                # Main robot model file
-    ├── scene.xml              # Complete scene with robot
-    ├── go1.png                # Robot image
-    ├── assets/                # Robot mesh files
-    │   ├── calf.stl
-    │   ├── hip.stl
-    │   ├── thigh.stl
-    │   ├── thigh_mirror.stl
-    │   └── trunk.stl
-    ├── CHANGELOG.md
-    ├── LICENSE
-    └── README.md
+├── Unstable_walking/          # 🔬 Walking gait research
+│   ├── unstable_walking.py    # Interactive unstable walking demo
+│   └── record_unstable_walking.py # Video recording script
+├── Model/                     # 🤖 Robot models
+│   └── unitree_go1/           # Unitree Go1 robot model
+│       ├── go1.xml            # Main robot model file
+│       ├── scene.xml          # Complete scene with robot
+│       ├── go1.png            # Robot image
+│       ├── assets/            # Robot mesh files
+│       │   ├── calf.stl
+│       │   ├── hip.stl
+│       │   ├── thigh.stl
+│       │   ├── thigh_mirror.stl
+│       │   └── trunk.stl
+│       ├── CHANGELOG.md
+│       ├── LICENSE
+│       └── README.md
+└── venv/                      # Python virtual environment
 ```
 
 ## 🛠️ Setup Instructions
@@ -156,6 +167,26 @@ jupyter notebook tutorial.ipynb
 - Keyframe animation
 - Physics parameter exploration
 
+### 4. Unstable Walking Research
+
+Explore quadruped locomotion algorithms:
+
+```bash
+# Interactive unstable walking demo
+python Unstable_walking/unstable_walking.py
+
+# Record video of unstable walking
+python Unstable_walking/record_unstable_walking.py
+```
+
+**Research Features:**
+
+- Real-time unstable walking simulation
+- Leg lifting and ground contact dynamics
+- Experimental gait patterns
+- Video recording for analysis
+- Parameter tuning for different behaviors
+
 ## 🎥 Video Generation
 
 The tutorial notebook demonstrates how to:
@@ -168,8 +199,10 @@ The tutorial notebook demonstrates how to:
 
 **Example outputs:**
 
-- **GIF Animation:** [`media/demo.gif`](media/demo.gif) - Compressed preview for quick viewing
-- **Full Video:** [`media/output.mp4`](media/output.mp4) - High-quality 10-second simulation with dynamic motion and smooth camera work
+- **Stable Simulation GIF:** [`media/demo.gif`](media/demo.gif) - Smooth simulation with camera rotation
+- **Unstable Walking GIF:** [`media/unstable_walking.gif`](media/unstable_walking.gif) - Research locomotion patterns
+- **Stable Video:** [`media/output.mp4`](media/output.mp4) - High-quality 10-second simulation with dynamic motion
+- **Unstable Walking Video:** [`media/unstable_walking.mp4`](media/unstable_walking.mp4) - 15-second unstable walking research footage
 
 ## 🤖 Robot Model: Unitree Go1
 
