@@ -1,12 +1,8 @@
-# MuJoCo Project - Robotics Simulation & Learning
+# MuJoCo Robotics Learning Project
 
-This project demonstrates MuJoCo physics simulation with educational robotics modules and research applications. It features the Unitree Go1 quadruped robot model, forward kinematics learning modules, and unstable walking gait research.
+This project provides a comprehensive educational journey through robotics simulation using MuJoCo, featuring progressive learning modules from basic planar manipulators to advanced UR5 robot kinematics and inverse kinematics.
 
 ## 📸 Preview
-
-### Screenshot
-
-![Project Screenshot](media/screenshot.png)
 
 ### Demo Animations
 
@@ -17,74 +13,181 @@ _The demo animation shows the Unitree Go1 robot simulation demonstrating unstabl
 
 > **Note:** Full video available at [`media/unstable_walking.mp4`](media/unstable_walking.mp4)
 
-## 🚀 Project Overview
+**General Demo:**
+![Demo Simulation](media/demo.gif)
 
-This repository contains:
+_General simulation demonstration showcasing MuJoCo physics capabilities._
 
-- **Educational robotics modules** with forward kinematics learning
-- **MuJoCo physics simulation** of the Unitree Go1 quadruped robot
-- **Interactive 3D visualization** and real-time simulation
-- **Jupyter notebook tutorials** for learning MuJoCo fundamentals
-- **Research applications** including unstable walking gait experiments
-- **Video rendering capabilities** for creating simulation outputs
-- **Customizable templates** for building your own simulations
+## 🎓 Learning Modules Overview
 
-## 📁 Project Structure
+This repository contains a structured learning path through robotics simulation, organized into progressive modules:
 
+### 1. Planar Manipulator (Module 1)
+
+**Location:** `Learning/1_Planar Manipulator/`
+
+- **Purpose:** Introduction to basic robotic manipulator concepts
+- **Model:** 3R planar manipulator (`planar_3R.xml`)
+- **Learning Focus:** Understanding joint configurations and basic robot structure
+- **Features:**
+  - Simple 3-revolute joint configuration
+  - Planar motion constraints
+  - Foundation for more complex manipulators
+
+### 2. Planar 3R Forward Kinematics (Module 2)
+
+**Location:** `Learning/2_Planar3R_Forward_Kinematics/`
+
+- **Purpose:** Learn forward kinematics calculations and verification
+- **Key Files:**
+  - `mj_planar3R_forward_kinematics.py` - MuJoCo simulation with interactive visualization
+  - `forward_kinematics.py` - Python implementation of forward kinematics
+  - `planar_3R.xml` - 3R manipulator model
+
+**Learning Features:**
+
+- **Interactive 3D visualization** of 3R planar manipulator
+- **Forward kinematics comparison** between MuJoCo and Python implementations
+- **Real-time position tracking** of end-effector
+- **Mathematical verification** of forward kinematics calculations
+- **Educational template** for custom simulations
+
+**Key Learning Outcomes:**
+
+- Understanding of homogeneous transformation matrices
+- Comparison of physics engine vs. analytical solutions
+- Interactive manipulation of joint angles
+- Visualization of workspace and reachable space
+
+**Usage:**
+
+```bash
+cd Learning/2_Planar3R_Forward_Kinematics
+python mj_planar3R_forward_kinematics.py
 ```
-MuJoCo Project/
-├── tutorial.ipynb              # Jupyter notebook with MuJoCo tutorial
-├── mujoco_viewer_demo.py       # Interactive viewer demonstration
-├── interactive_viewer.py       # Additional interactive viewer script
-├── requirements.txt            # Python dependencies
-├── README.md                  # Project documentation
-├── MJDATA.TXT                 # MuJoCo debug/memory data
-├── media/                     # 📁 Media files
-│   ├── demo.gif               # 🎬 Demo simulation
-│   ├── output.mp4             # 🎥 Demo video output
-│   ├── unstable_walking.gif   # 🎬 Unstable walking demo
-│   ├── unstable_walking.mp4   # 🎥 Unstable walking video
-│   └── screenshot.png         # 📸 Project screenshot
-├── Learning/                  # 📚 Educational robotics modules
-│   ├── 1_Planar Manipulator/  # Basic planar manipulator setup
-│   │   └── planar_3R.xml      # 3R planar manipulator model
-│   └── 2_Planar3R_Forward_Kinematics/ # Forward kinematics learning
-│       ├── mj_planar3R_forward_kinematics.py # MuJoCo forward kinematics demo
-│       ├── forward_kinematics.py # Python forward kinematics implementation
-│       └── planar_3R.xml      # 3R manipulator model
-├── Unstable_walking/          # 🔬 Walking gait research
-│   ├── unstable_walking.py    # Interactive unstable walking demo
-│   └── record_unstable_walking.py # Video recording script
-├── Model/                     # 🤖 Robot models
-│   └── unitree_go1/           # Unitree Go1 robot model
-│       ├── go1.xml            # Main robot model file
-│       ├── scene.xml          # Complete scene with robot
-│       ├── go1.png            # Robot image
-│       ├── assets/            # Robot mesh files
-│       │   ├── calf.stl
-│       │   ├── hip.stl
-│       │   ├── thigh.stl
-│       │   ├── thigh_mirror.stl
-│       │   └── trunk.stl
-│       ├── CHANGELOG.md
-│       ├── LICENSE
-│       └── README.md
-└── venv/                      # Python virtual environment
+
+### 3. UR5 Forward Kinematics (Module 3)
+
+**Location:** `Learning/3_UR5_Forward_Kinematics/`
+
+- **Purpose:** Advanced forward kinematics with 6-DOF industrial robot
+- **Key Files:**
+  - `mj_forward_kinematcs.py` - MuJoCo UR5 simulation
+  - `forward_kinematics.py` - Python forward kinematics implementation
+  - `py_forward_kinematics.py` - Pure Python forward kinematics
+  - `animate.py` - Animation utilities
+  - `robot_data.py` - UR5 robot parameters and configuration
+  - `utility.py` - Mathematical utility functions
+
+**Learning Features:**
+
+- **6-DOF UR5 robot simulation** with realistic dynamics
+- **Advanced forward kinematics** using DH parameters
+- **Quaternion and rotation matrix** mathematics
+- **Real-time end-effector tracking** and visualization
+- **Comparison between analytical and simulation** results
+- **Animation capabilities** for trajectory visualization
+
+**Key Learning Outcomes:**
+
+- Understanding of 6-DOF robot kinematics
+- DH parameter methodology
+- Quaternion mathematics and conversions
+- Industrial robot simulation techniques
+- Advanced visualization and animation
+
+**Usage:**
+
+```bash
+cd Learning/3_UR5_Forward_Kinematics
+python mj_forward_kinematcs.py
 ```
+
+### 4. UR5 Inverse Kinematics (Module 4)
+
+**Location:** `Learning/4_UR5_Inverse_Kinematics/`
+
+- **Purpose:** Learn inverse kinematics solving and trajectory following
+- **Key Files:**
+  - `mj_inverse_kinematcs.py` - Basic inverse kinematics simulation
+  - `mj_inverse_kinematcs_circle.py` - Circle trajectory following
+  - `inverse_kinematics.py` - Inverse kinematics solver using scipy.optimize
+  - `forward_kinematics.py` - Forward kinematics for verification
+  - `robot_data.py` - UR5 robot configuration
+  - `utility.py` - Mathematical utilities
+
+**Learning Features:**
+
+- **Inverse kinematics solving** using numerical optimization
+- **Trajectory following** capabilities
+- **Circle path tracking** demonstration
+- **Real-time IK computation** with scipy.optimize.fsolve
+- **Position and orientation control** of end-effector
+- **Comparison between reference and actual** end-effector poses
+
+**Key Learning Outcomes:**
+
+- Understanding of inverse kinematics problem formulation
+- Numerical optimization techniques for robotics
+- Trajectory planning and execution
+- Real-time control implementation
+- Error analysis and verification
+
+**Usage:**
+
+```bash
+# Basic inverse kinematics
+cd Learning/4_UR5_Inverse_Kinematics
+python mj_inverse_kinematcs.py
+
+# Circle trajectory following
+python mj_inverse_kinematcs_circle.py
+```
+
+## 🤖 Robot Models
+
+### UR5 Industrial Robot
+
+**Location:** `Learning/Models/UR5/`
+
+The project includes a complete UR5 robot model with:
+
+- **6 degrees of freedom** (shoulder, elbow, wrist joints)
+- **Realistic joint limits** and dynamics
+- **High-quality mesh models** for visual rendering
+- **Collision geometries** for physics simulation
+- **Complete scene setup** with proper lighting and materials
+
+**Model Files:**
+
+- `ur5e.xml` - Main robot model
+- `scene.xml` - Complete scene with robot
+- `assets/` - 3D mesh files for all robot components
+
+### Planar 3R Manipulator
+
+**Location:** `Learning/1_Planar Manipulator/` and `Learning/2_Planar3R_Forward_Kinematics/`
+
+A simplified 3-revolute joint manipulator:
+
+- **3 degrees of freedom** in the XY plane
+- **Educational focus** on basic kinematics concepts
+- **Interactive visualization** with real-time position tracking
 
 ## 🛠️ Setup Instructions
 
 ### Prerequisites
 
 - Python 3.8 or higher
-- Git (optional, for cloning)
+- MuJoCo 3.0 or higher
+- Required Python packages (see requirements.txt)
 
 ### Installation
 
 1. **Clone or download the project**
 
    ```bash
-   git clone https://github.com/tawsifmahmud05/MuJoCo-Simulation
+   git clone <repository-url>
    cd "MuJoCo Project"
    ```
 
@@ -111,7 +214,7 @@ MuJoCo Project/
 
 4. **Verify installation**
    ```bash
-   python -c "import mujoco, numpy, mediapy; print('Installation successful!')"
+   python -c "import mujoco, numpy, scipy; print('Installation successful!')"
    ```
 
 ## 📦 Dependencies
@@ -120,107 +223,53 @@ The project uses the following main packages:
 
 - **mujoco (≥3.0.0)** - Physics simulation engine
 - **numpy (≥1.21.0)** - Numerical computations
+- **scipy (≥1.7.0)** - Optimization and scientific computing
+- **matplotlib (≥3.5.0)** - Plotting and visualization
 - **mediapy (≥1.1.0)** - Media processing and visualization
-- **tqdm (≥4.64.0)** - Progress bars
-- **imageio (≥2.19.0)** - Video/image I/O
-- **pathlib2 (≥2.3.0)** - Path handling utilities
 
-See `requirements.txt` for the complete list with all dependencies.
+## 🎮 Usage Examples
 
-## 🎮 Usage
+### Learning Path Progression
 
-### 1. Learning Modules - Robotics Education
+1. **Start with Planar Manipulator**
 
-Start with the educational modules to learn robotics fundamentals:
+   ```bash
+   cd Learning/1_Planar_Manipulator
+   # Examine the XML model structure
+   ```
 
-#### 1.1 Planar 3R Manipulator Forward Kinematics
+2. **Forward Kinematics Learning**
 
-Learn forward kinematics with a 3-revolute joint planar manipulator:
+   ```bash
+   cd Learning/2_Planar3R_Forward_Kinematics
+   python mj_planar3R_forward_kinematics.py
+   ```
 
-```bash
-# Run the MuJoCo forward kinematics demonstration
-cd Learning/2_Planar3R_Forward_Kinematics
-python mj_planar3R_forward_kinematics.py
-```
+3. **Advanced Forward Kinematics**
 
-**Learning Features:**
+   ```bash
+   cd Learning/3_UR5_Forward_Kinematics
+   python mj_forward_kinematcs.py
+   ```
 
-- **Interactive 3D visualization** of 3R planar manipulator
-- **Forward kinematics comparison** between MuJoCo and Python implementations
-- **Real-time position tracking** of end-effector
-- **Educational template** (`template_mujoco.py`) for custom simulations
-- **Mathematical verification** of forward kinematics calculations
+4. **Inverse Kinematics Mastery**
+   ```bash
+   cd Learning/4_UR5_Inverse_Kinematics
+   python mj_inverse_kinematcs.py
+   python mj_inverse_kinematcs_circle.py
+   ```
 
-**Key Learning Outcomes:**
+### Interactive Features
 
-- Understanding of homogeneous transformation matrices
-- Comparison of physics engine vs. analytical solutions
-- Interactive manipulation of joint angles
-- Visualization of workspace and reachable space
+Each module includes:
 
-#### 1.2 Custom Simulation Development
+- **Mouse controls** for camera manipulation
+- **Keyboard shortcuts** for simulation control
+- **Real-time visualization** of robot motion
+- **Mathematical verification** displays
+- **Error analysis** and comparison tools
 
-Create your own MuJoCo simulations using the existing code as reference:
-
-```bash
-# Use the forward kinematics demo as a starting point
-cp Learning/2_Planar3R_Forward_Kinematics/mj_planar3R_forward_kinematics.py my_simulation.py
-```
-
-**Development Features:**
-
-- Complete MuJoCo setup with OpenGL rendering
-- Interactive camera controls (mouse and keyboard)
-- Controller framework for custom algorithms
-- Configurable simulation parameters
-- Forward kinematics implementation examples
-
-### 2. Jupyter Notebook Tutorial
-
-Launch Jupyter and open the comprehensive tutorial:
-
-```bash
-jupyter notebook tutorial.ipynb
-```
-
-**Tutorial includes:**
-
-- MuJoCo basics and model loading
-- Rendering and visualization techniques
-- Camera control and animation
-- Video generation and export
-- Keyframe animation
-- Physics parameter exploration
-
-### 3. Unstable Walking Research
-
-Explore quadruped locomotion algorithms:
-
-```bash
-# Interactive unstable walking demo
-python Unstable_walking/unstable_walking.py
-
-# Record video of unstable walking
-python Unstable_walking/record_unstable_walking.py
-```
-
-**Research Features:**
-
-- Real-time unstable walking simulation
-- Leg lifting and ground contact dynamics
-- Experimental gait patterns
-- Video recording for analysis
-- Parameter tuning for different behaviors
-
-## 🎥 Video Generation & Media
-
-The tutorial notebook demonstrates how to:
-
-1. Set up cameras with smooth rotation
-2. Apply control noise for realistic motion
-3. Blend between visual and collision geometries
-4. Render high-quality videos
-5. Export as MP4 files
+## 🎥 Media and Visualizations
 
 **Available Media:**
 
@@ -230,77 +279,60 @@ The tutorial notebook demonstrates how to:
 - **Unstable Walking Video:** [`media/unstable_walking.mp4`](media/unstable_walking.mp4) - 15-second unstable walking research footage
 - **Project Screenshot:** [`media/screenshot.png`](media/screenshot.png) - Overview of the simulation environment
 
-## 🤖 Robot Models
-
-### Unitree Go1 Quadruped Robot
-
-The project uses the Unitree Go1 quadruped robot model featuring:
-
-- **12 degrees of freedom** (3 per leg)
-- **Realistic joint limits** and dynamics
-- **High-quality mesh models** for visual rendering
-- **Collision geometries** for physics simulation
-- **Multiple keyframes** for different poses
-
-### Planar 3R Manipulator
-
-The learning modules include a 3-revolute joint planar manipulator:
-
-- **3 degrees of freedom** in the XY plane
-- **Link lengths**: l1=1.0m, l2=1.0m, l3=0.25m
-- **Forward kinematics** using homogeneous transformation matrices
-- **Interactive visualization** with real-time position tracking
-- **Educational comparison** between MuJoCo and analytical solutions
-
 ## 🔧 Customization & Development
-
-### Simulation Parameters
-
-Key parameters you can modify in your simulations:
-
-```python
-# In tutorial.ipynb or custom simulations
-duration = 10.0          # Simulation duration (seconds)
-ctrl_rate = 2            # Control update rate
-ctrl_std = 0.05          # Control noise standard deviation
-total_rot = 60           # Camera rotation (degrees)
-fps = 60                 # Video frame rate
-```
-
-### Camera Settings
-
-```python
-# Camera configuration for optimal viewing
-camera.distance = 1.5    # Distance from robot
-camera.azimuth = 0       # Horizontal angle
-camera.elevation = -20   # Vertical angle
-camera.lookat = [0, 0, 0] # Focus point
-```
-
-### Rendering Options
-
-```python
-# Resolution options for video generation
-Resolution.SD = (480, 640)     # Standard definition
-Resolution.HD = (720, 1280)    # High definition
-Resolution.UHD = (2160, 3840)  # Ultra high definition
-```
 
 ### Creating Custom Simulations
 
-Use the existing code as a starting point for your own simulations:
+Use any module as a starting point for your own simulations:
 
 ```python
-# Copy the forward kinematics demo and modify
-cp Learning/2_Planar3R_Forward_Kinematics/mj_planar3R_forward_kinematics.py my_simulation.py
+# Copy a module and modify
+cp -r Learning/3_UR5_Forward_Kinematics my_custom_module
 
 # Key areas to customize:
 # 1. XML model path
 # 2. Controller logic in controller() function
 # 3. Initialization in init_controller() function
 # 4. Camera settings for visualization
-# 5. Forward kinematics calculations
+# 5. Forward/inverse kinematics calculations
 ```
+
+### Simulation Parameters
+
+Key parameters you can modify:
+
+```python
+# Simulation timing
+simend = 5  # Simulation duration (seconds)
+dt = 0.02   # Time step
+
+# Camera settings
+cam.azimuth = -130
+cam.elevation = -5
+cam.distance = 2
+cam.lookat = np.array([0.0, 0.0, 0.5])
+
+# Control parameters
+ctrl_rate = 60  # Control update rate
+```
+
+## 🎓 Educational Value
+
+This project is designed for:
+
+- **Students** learning robotics and simulation
+- **Researchers** exploring kinematics algorithms
+- **Developers** building custom MuJoCo applications
+- **Educators** teaching robotics concepts
+
+### Learning Progression
+
+1. **Module 1:** Basic robot structure and joint concepts
+2. **Module 2:** Forward kinematics fundamentals with verification
+3. **Module 3:** Advanced 6-DOF forward kinematics
+4. **Module 4:** Inverse kinematics and trajectory following
+
+Each module builds upon the previous one, providing a comprehensive understanding of robotic manipulation.
 
 ## 🐛 Troubleshooting
 
@@ -316,31 +348,29 @@ cp Learning/2_Planar3R_Forward_Kinematics/mj_planar3R_forward_kinematics.py my_s
    - Update graphics drivers
    - Try software rendering: `export MUJOCO_GL=osmesa`
 
-3. **Memory Issues**
+3. **Model Loading Errors**
 
-   - Reduce video resolution
-   - Decrease simulation duration
-   - Close other applications
+   - Check that model XML files exist in correct paths
+   - Verify all mesh files are in the assets directory
 
-4. **Model Loading Errors**
-   - Check that `unitree_go1/scene.xml` exists
-   - Verify all mesh files are in `unitree_go1/assets/`
+4. **Inverse Kinematics Convergence Issues**
+   - Try different initial joint configurations
+   - Adjust optimization parameters in scipy.optimize.fsolve
 
 ## 📊 Performance Notes
 
-- **Simulation speed**: ~28 steps/second on typical hardware
-- **Memory usage**: ~500MB for standard simulations
-- **Video rendering**: Real-time for SD, slower for HD/UHD
+- **Simulation speed**: ~60 FPS on typical hardware
+- **Memory usage**: ~200-500MB depending on module
 - **Learning modules**: Optimized for educational use with clear visualizations
-- **Research simulations**: Configurable for high-performance computing
+- **Real-time IK**: Achievable for simple trajectories
 
-## 🎓 Educational Value
+## 🤝 Contributing
 
-This project is designed for:
+This project is designed for educational purposes. Feel free to:
 
-- **Students** learning robotics and simulation
-- **Researchers** exploring locomotion algorithms
-- **Developers** building custom MuJoCo applications
-- **Educators** teaching robotics concepts
+- Add new learning modules
+- Improve existing implementations
+- Create additional robot models
+- Enhance visualization features
 
-The structured learning modules provide a clear progression from basic forward kinematics to advanced simulation techniques.
+The structured learning approach makes it easy to contribute new educational content while maintaining the progressive learning path.
